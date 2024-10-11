@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:myapp/app/routes/app_pages.dart';
 import 'package:myapp/app/routes/app_routes.dart';
+import 'app/routes/app_pages.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Order App',
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: Colors.black,
@@ -21,8 +23,9 @@ class MyApp extends StatelessWidget {
           elevation: 0,
         ),
       ),
-      initialRoute: AppRoutes.HOME,
-      getPages: AppPages.routes,
+      // initialRoute: AppRoutes.HOME,
+      initialRoute: AppRoutes.HOME, // Gunakan INITIAL dari AppPages
+      getPages: AppPages.routes, // Menggunakan rute yang sudah didefinisikan
     );
   }
 }
