@@ -1,9 +1,12 @@
 import 'package:get/get.dart';
 import 'package:myapp/app/modules/home/bindings/order_binding.dart';
 import 'package:myapp/app/modules/home/views/done_view.dart';
+import 'package:myapp/app/modules/home/views/ecode_view.dart';
+import 'package:myapp/app/modules/home/views/email_view.dart';
 import 'package:myapp/app/modules/home/views/login_view.dart';
 import 'package:myapp/app/modules/home/views/loginas_view.dart';
 import 'package:myapp/app/modules/home/views/order_view.dart';
+import 'package:myapp/app/modules/home/views/password_view.dart';
 import 'package:myapp/app/modules/home/views/payment_view.dart';
 import 'package:myapp/app/modules/home/views/scan_view.dart';
 import 'package:myapp/app/modules/home/views/signup_view.dart';
@@ -69,7 +72,21 @@ class AppPages {
       page: () => VerifView(),
       binding: HomeBinding(), // You can create a separate binding for PaymentView if needed
     ),
-
+    GetPage(
+      name: AppRoutes.EMAIL, // Define the new route for PaymentView
+      page: () => EmailView(),
+      binding: HomeBinding(), // You can create a separate binding for PaymentView if needed
+    ),
+    GetPage(
+      name: AppRoutes.ECODE, // Define the new route for PaymentView
+      page: () => EcodeView(),
+      binding: HomeBinding(), // You can create a separate binding for PaymentView if needed
+    ),
+    GetPage(
+      name: AppRoutes.PASSWORD, // Define the new route for PaymentView
+      page: () => PasswordView(),
+      binding: HomeBinding(), // You can create a separate binding for PaymentView if needed
+    ),
 
   ];
 }

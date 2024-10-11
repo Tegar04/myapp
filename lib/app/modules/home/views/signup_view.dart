@@ -12,7 +12,7 @@ class SignupView extends GetView<HomeController> {
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/images/gambar2.png'),
+                image: AssetImage('assets/gambar2.png'),
                 fit: BoxFit.cover,
               ),
             ),

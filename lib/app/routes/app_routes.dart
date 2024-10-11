@@ -10,4 +10,7 @@ abstract class AppRoutes {
   static const SIGNUP = '/signup';
   static const VERIF = '/verif';
   static const SUKSES = '/sukses';
+  static const EMAIL = '/email';
+  static const ECODE = '/ecode';
+  static const PASSWORD = '/password';
 }
