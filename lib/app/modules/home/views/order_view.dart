@@ -10,9 +10,10 @@ class OrderView extends GetView<HomeController> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () => Get.back(),
-        ),
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {
+              Get.toNamed('/welcome');
+            }),
         title: Text('Order'),
         centerTitle: true,
         actions: [

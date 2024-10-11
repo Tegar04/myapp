@@ -15,9 +15,9 @@ class DoneView extends GetView<ScanController> {
           'Payment',
           style: TextStyle(color: Colors.white),
         ),
-        centerTitle: true, // Tambahkan properti ini untuk membuat judul rata tengah
+        centerTitle:
+            true, // Tambahkan properti ini untuk membuat judul rata tengah
       ),
-
       body: Container(
         color: Colors.black,
         child: Column(
@@ -29,7 +29,10 @@ class DoneView extends GetView<ScanController> {
                   children: [
                     Text(
                       'SUCCES !!!',
-                      style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold),
                     ),
                     SizedBox(height: 20),
                     Container(
@@ -55,10 +58,12 @@ class DoneView extends GetView<ScanController> {
                     child: ElevatedButton(
                       child: Text('Done'),
                       onPressed: () {
+                        Get.toNamed('/home');
                         // Handle done button press
                       },
                       style: ElevatedButton.styleFrom(
-                        foregroundColor: Colors.black, backgroundColor: Colors.white,
+                        foregroundColor: Colors.black,
+                        backgroundColor: Colors.white,
                       ),
                     ),
                   ),

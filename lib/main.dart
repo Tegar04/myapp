@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       // initialRoute: AppRoutes.HOME,
-      initialRoute: AppRoutes.HOME, // Gunakan INITIAL dari AppPages
+      initialRoute: AppRoutes.WELCOME, // Gunakan INITIAL dari AppPages
       getPages: AppPages.routes, // Menggunakan rute yang sudah didefinisikan
     );
   }

@@ -137,7 +137,7 @@ class VoucherView extends GetView<HomeController> {
       child: ElevatedButton(
         onPressed: () {
           // Navigate back to HomeView
-          Get.toNamed('/home'); // Use GetX to navigate to the home route
+          Get.toNamed('/order'); // Use GetX to navigate to the home route
         },
         child: Text('Done'),
         style: ElevatedButton.styleFrom(
