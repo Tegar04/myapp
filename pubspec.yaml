@@ -12,6 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   get: ^4.6.5
+  qr_flutter: ^4.0.0
 
 dev_dependencies:
   flutter_test:
@@ -22,3 +23,5 @@ flutter:
   uses-material-design: true
   assets:
     - assets/hotcig_r234.jpg
+    - assets/qr_code.png
+    - assets/checklist.png

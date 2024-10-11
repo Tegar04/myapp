@@ -47,6 +47,7 @@ class PaymentView extends GetView<HomeController> {
             style: TextStyle(fontSize: 18, color: Colors.white),
           ),
         ),
+        
         SizedBox(height: 12),
         _buildPaymentMethodButton('QRIS', Colors.orange),
         SizedBox(height: 12),
@@ -65,7 +66,7 @@ class PaymentView extends GetView<HomeController> {
       child: Center(
         child: Text(
           method,
-          style: TextStyle(fontSize: 18, color: Colors.black),
+          style: TextStyle(fontSize: 18, color: const Color.fromARGB(255, 255, 255, 255)),
         ),
       ),
     );
