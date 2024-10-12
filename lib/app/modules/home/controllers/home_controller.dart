@@ -1,24 +1,52 @@
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  RxInt quantity = 1.obs;
-  final RxDouble price = 26.35.obs;
-  final RxDouble discount = 1.35.obs;
-  final RxDouble total = 25.00.obs;
+  final categories = ['All Vape', 'Liquid', 'Accessories', 'Atomizer'].obs;
+  final selectedCategory = 'All Vape'.obs;
 
-  void incrementQuantity() {
-    quantity++;
-    updateTotal();
+  final products = [
+    {
+      "name": "Hotcig R234",
+      "brand": "VAPEBOSS",
+      "price": 26.35,
+      "image": "hotcig_r234.jpg",
+      "category": "Vape"
+    },
+    {
+      "name": "TRML T200",
+      "brand": "THERMAL X INVERSE",
+      "price": 29.34,
+      "image": "trml_t200.jpg",
+      "category": "Vape"
+    },
+    {
+      "name": "Hexohm V3",
+      "brand": "VAPEBOSS",
+      "price": 180.00,
+      "image": "hexom_v3.jpg",
+      "category": "Vape"
+    },
+    {
+      "name": "Centaurus M200",
+      "brand": "Lost Vape",
+      "price": 129.99,
+      "image": "centaurus_m200.jpg",
+      "category": "Vape"
+    },
+  ].obs;
+
+  // Tambahkan metode ini
+  void setSelectedCategory(String category) {
+    selectedCategory.value = category;
   }
 
-  void decrementQuantity() {
-    if (quantity > 1) {
-      quantity--;
-      updateTotal();
+  List<Map<String, dynamic>> get filteredProducts {
+    if (selectedCategory.value == 'All Vape') {
+      return products;
+    } else {
+      return products
+          .where((product) => product['category'] == selectedCategory.value)
+          .toList();
     }
-  }
-
-  void updateTotal() {
-    total.value = (price.value * quantity.value) - discount.value;
   }
 }

@@ -1,9 +1,9 @@
 // app/modules/welcome/welcome_view.dart
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:myapp/app/modules/home/controllers/home_controller.dart';
+import 'package:myapp/app/modules/home/controllers/order_controller.dart';
 
-class WelcomeView extends GetView<HomeController> {
+class WelcomeView extends GetView<OrderController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,7 +12,7 @@ class WelcomeView extends GetView<HomeController> {
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/gambar1.png'),
+                image: AssetImage('assets/images/gambar1.png'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -21,7 +21,7 @@ class WelcomeView extends GetView<HomeController> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset('assets/logo2.png', height: 280),
+                Image.asset('assets/images/logo2.png', height: 280),
                 SizedBox(height: 30),
                 Text(
                   'SM Vapestore Malang',

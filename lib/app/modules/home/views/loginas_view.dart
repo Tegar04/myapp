@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:myapp/app/modules/home/controllers/home_controller.dart';
+import 'package:myapp/app/modules/home/controllers/order_controller.dart';
 
-class LoginasView extends GetView<HomeController> {
+class LoginasView extends GetView<OrderController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,7 +12,7 @@ class LoginasView extends GetView<HomeController> {
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/gambar1.png'),
+                image: AssetImage('assets/images/gambar1.png'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -22,7 +22,7 @@ class LoginasView extends GetView<HomeController> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 // Logo at the top
-                Image.asset('assets/logo2.png', height: 180),
+                Image.asset('assets/images/logo2.png', height: 180),
                 SizedBox(height: 20),
                 Text(
                   'Login As',
@@ -36,7 +36,7 @@ class LoginasView extends GetView<HomeController> {
                 // Login buttons for Admin and Guest/Member
                 ElevatedButton(
                   onPressed: () {
-                    Get.toNamed('/login');
+                    Get.toNamed('/admin');
                     // Navigate to admin login
                   },
                   style: ElevatedButton.styleFrom(

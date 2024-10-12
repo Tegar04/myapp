@@ -39,7 +39,7 @@ class DoneView extends GetView<ScanController> {
                       width: 200,
                       height: 200,
                       child: Image.asset(
-                        'assets/checklist.png',
+                        'assets/images/checklist.png',
                         fit: BoxFit.contain,
                       ),
                     ),

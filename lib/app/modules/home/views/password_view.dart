@@ -20,7 +20,7 @@ class PasswordView extends StatelessWidget {
             decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
-                    'assets/gambar2.png'), // Replace with actual background image path
+                    'assets/images/gambar2.png'), // Replace with actual background image path
                 fit: BoxFit.cover,
               ),
             ),

@@ -1,9 +1,9 @@
 // app/modules/welcome/welcome_view.dart
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:myapp/app/modules/home/controllers/home_controller.dart';
+import 'package:myapp/app/modules/home/controllers/order_controller.dart';
 
-class SignupView extends GetView<HomeController> {
+class SignupView extends GetView<OrderController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,7 +12,7 @@ class SignupView extends GetView<HomeController> {
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/gambar2.png'),
+                image: AssetImage('assets/images/gambar2.png'),
                 fit: BoxFit.cover,
               ),
             ),

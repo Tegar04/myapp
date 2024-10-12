@@ -1,19 +1,32 @@
 import 'package:get/get.dart';
 import 'package:myapp/app/modules/home/bindings/order_binding.dart';
+import 'package:myapp/app/modules/home/views/cart_view.dart';
+import 'package:myapp/app/modules/home/views/detail_view.dart';
+import 'package:myapp/app/modules/home/views/discount_view.dart';
+import 'package:myapp/app/modules/home/views/discountsukses_view.dart';
 import 'package:myapp/app/modules/home/views/done_view.dart';
 import 'package:myapp/app/modules/home/views/ecode_view.dart';
+import 'package:myapp/app/modules/home/views/editdiscount_view.dart';
 import 'package:myapp/app/modules/home/views/email_view.dart';
+import 'package:myapp/app/modules/home/views/home2_view.dart';
+import 'package:myapp/app/modules/home/views/home_view.dart';
+import 'package:myapp/app/modules/home/views/inputmembers_view.dart';
 import 'package:myapp/app/modules/home/views/login_view.dart';
 import 'package:myapp/app/modules/home/views/loginas_view.dart';
+import 'package:myapp/app/modules/home/views/admin_view.dart';
+import 'package:myapp/app/modules/home/views/memberslist_view.dart';
+import 'package:myapp/app/modules/home/views/notification_view.dart';
 import 'package:myapp/app/modules/home/views/order_view.dart';
 import 'package:myapp/app/modules/home/views/password_view.dart';
 import 'package:myapp/app/modules/home/views/payment_view.dart';
 import 'package:myapp/app/modules/home/views/scan_view.dart';
 import 'package:myapp/app/modules/home/views/signup_view.dart';
+import 'package:myapp/app/modules/home/views/stock_view.dart';
 import 'package:myapp/app/modules/home/views/sukses_view.dart';
 import 'package:myapp/app/modules/home/views/verif_view.dart';
 import 'package:myapp/app/modules/home/views/voucher_view.dart';
 import 'package:myapp/app/modules/home/views/welcome_view.dart';
+import 'package:myapp/app/modules/home/views/wishlist_view.dart';
 import 'app_routes.dart';
 
 class AppPages {
@@ -87,6 +100,70 @@ class AppPages {
       page: () => PasswordView(),
       binding: HomeBinding(), // You can create a separate binding for PaymentView if needed
     ),
-
+    GetPage(
+      name: AppRoutes.HOME, // Define the new route for PaymentView
+      page: () => HomeView(),
+      binding: HomeBinding(), // You can create a separate binding for PaymentView if needed
+    ),
+    GetPage(
+      name: AppRoutes.ADMIN, // Define the new route for PaymentView
+      page: () => AdminView(),
+      binding: HomeBinding(), // You can create a separate binding for PaymentView if needed
+    ),
+    GetPage(
+      name: AppRoutes.MEMBERLIST, // Define the new route for PaymentView
+      page: () => MemberlistView(),
+      binding: HomeBinding(), // You can create a separate binding for PaymentView if needed
+    ),
+    GetPage(
+      name: AppRoutes.INPUT, // Define the new route for PaymentView
+      page: () => InputMView(),
+      binding: HomeBinding(), // You can create a separate binding for PaymentView if needed
+    ),
+    GetPage(
+      name: AppRoutes.STOCK, // Define the new route for PaymentView
+      page: () => StockView(),
+      binding: HomeBinding(), // You can create a separate binding for PaymentView if needed
+    ),
+    GetPage(
+      name: AppRoutes.DETAIL, // Define the new route for PaymentView
+      page: () => DetailView(),
+      binding: HomeBinding(), // You can create a separate binding for PaymentView if needed
+    ),
+    GetPage(
+      name: AppRoutes.CART, // Define the new route for PaymentView
+      page: () => CartView(),
+      binding: HomeBinding(), // You can create a separate binding for PaymentView if needed
+    ),
+    GetPage(
+      name: AppRoutes.NOTIFICATION, // Define the new route for PaymentView
+      page: () => NotificationView(),
+      binding: HomeBinding(), // You can create a separate binding for PaymentView if needed
+    ),
+    GetPage(
+      name: AppRoutes.WISHLIST, // Define the new route for PaymentView
+      page: () => WishlistView(),
+      binding: HomeBinding(), // You can create a separate binding for PaymentView if needed
+    ),
+    GetPage(
+      name: AppRoutes.DISCOUNT, // Define the new route for PaymentView
+      page: () => DiscountView(),
+      binding: HomeBinding(), // You can create a separate binding for PaymentView if needed
+    ),
+    GetPage(
+      name: AppRoutes.EDISCOUNT, // Define the new route for PaymentView
+      page: () => EditdiscountView(),
+      binding: HomeBinding(), // You can create a separate binding for PaymentView if needed
+    ),    
+    GetPage(
+      name: AppRoutes.DISCOUNTSUKSES, // Define the new route for PaymentView
+      page: () => DiscountsuksesView(),
+      binding: HomeBinding(), // You can create a separate binding for PaymentView if needed
+    ),   
+    GetPage(
+      name: AppRoutes.HOME2, // Define the new route for PaymentView
+      page: () => Home2View(),
+      binding: HomeBinding(), // You can create a separate binding for PaymentView if needed
+    ),     
   ];
 }

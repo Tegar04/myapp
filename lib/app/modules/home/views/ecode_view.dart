@@ -20,7 +20,7 @@ class EcodeView extends StatelessWidget {
             decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
-                    'assets/gambar2.png'), // Replace with the actual path to the background image
+                    'assets/images/gambar2.png'), // Replace with the actual path to the background image
                 fit: BoxFit.cover,
               ),
             ),

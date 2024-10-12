@@ -22,9 +22,15 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/hotcig_r234.jpg
-    - assets/qr_code.png
-    - assets/checklist.png
-    - assets/gambar1.png
-    - assets/gambar2.png
-    - assets/logo2.png
+    - assets/images/hotcig_r234.jpg
+    - assets/images/qr_code.png
+    - assets/images/checklist.png
+    - assets/images/gambar1.png
+    - assets/images/gambar2.png
+    - assets/images/logo2.png
+    - assets/images/promo.jpg
+    - assets/images/trml_t200.jpg
+    - assets/images/centaurus_m200.jpg
+    - assets/images/hexom_v3.jpg
+    - assets/images/liq1.jpeg
+    - assets/images/liq2.jpg

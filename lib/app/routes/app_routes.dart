@@ -13,4 +13,17 @@ abstract class AppRoutes {
   static const EMAIL = '/email';
   static const ECODE = '/ecode';
   static const PASSWORD = '/password';
+  static const HOME = '/home';
+  static const ADMIN = '/admin';
+  static const MEMBERLIST = '/memberlist';
+  static const INPUT = '/input';
+  static const STOCK = '/stock';
+  static const DETAIL = '/detail';
+  static const CART = '/cart';
+  static const NOTIFICATION = '/notification';
+  static const WISHLIST = '/wishlist';
+  static const DISCOUNT = '/discount';
+  static const EDISCOUNT = '/ediscount';
+  static const DISCOUNTSUKSES = '/discountsukses';
+  static const HOME2 = '/home2';
 }

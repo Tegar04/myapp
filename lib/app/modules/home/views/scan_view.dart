@@ -39,7 +39,7 @@ class ScanView extends GetView<ScanController> {
                       width: 200,
                       height: 200,
                       child: Image.asset(
-                        'assets/qr_code.png',
+                        'assets/images/qr_code.png',
                         fit: BoxFit.contain,
                       ),
                     ),

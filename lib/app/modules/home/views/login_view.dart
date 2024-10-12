@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:myapp/app/modules/home/controllers/home_controller.dart';
+import 'package:myapp/app/modules/home/controllers/order_controller.dart';
 import 'package:flutter/gestures.dart'; // Add this import for TapGestureRecognizer
 
-class LoginView extends GetView<HomeController> {
+class LoginView extends GetView<OrderController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,7 +12,7 @@ class LoginView extends GetView<HomeController> {
           // Background image
           Positioned.fill(
             child: Image.asset(
-              'assets/gambar2.png',
+              'assets/images/gambar2.png',
               fit: BoxFit.cover,
             ),
           ),
@@ -78,7 +78,7 @@ class LoginView extends GetView<HomeController> {
                         // Login button
                         ElevatedButton(
                           onPressed: () {
-                            Get.toNamed('/order');
+                            Get.toNamed('/home');
                           },
                           style: ElevatedButton.styleFrom(
                             foregroundColor: Colors.white,

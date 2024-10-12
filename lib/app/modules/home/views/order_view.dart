@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../controllers/home_controller.dart';
+import '../controllers/order_controller.dart';
 
-class OrderView extends GetView<HomeController> {
+class OrderView extends GetView<OrderController> {
   const OrderView({Key? key}) : super(key: key);
 
   @override
@@ -77,7 +77,7 @@ class OrderView extends GetView<HomeController> {
         child: Row(
           children: [
             Image.asset(
-              'assets/hotcig_r234.jpg', // Pastikan path ini benar
+              'assets/images/hotcig_r234.jpg', // Pastikan path ini benar
               width: 80,
               height: 80,
               fit: BoxFit.cover,

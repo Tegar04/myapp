@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../controllers/home_controller.dart';
+import '../controllers/order_controller.dart';
 
-class VoucherView extends GetView<HomeController> {
+class VoucherView extends GetView<OrderController> {
   const VoucherView({Key? key}) : super(key: key);
 
   @override
