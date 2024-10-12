@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class HomeView extends StatelessWidget {
-  const HomeView({Key? key}) : super(key: key);
+class AccessoriesView extends StatelessWidget {
+  const AccessoriesView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -108,11 +108,11 @@ class HomeView extends StatelessWidget {
             ),
 
             // Category Buttons
-            // Category Buttons
             Padding(
               padding: const EdgeInsets.all(16),
               child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal, // Mengatur scroll secara horizontal
+                scrollDirection:
+                    Axis.horizontal, // Mengatur scroll secara horizontal
                 child: Row(
                   children: ['All Vape', 'Liquid', 'Accesoris', 'Atomize']
                       .asMap()
@@ -122,26 +122,15 @@ class HomeView extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 5.0),
                       child: ElevatedButton(
                         onPressed: () {
-                          String routeName;
-                          switch (entry.key) {
-                            case 1: // Liquid
-                              routeName = '/liquid'; // Rute Liquid
-                              break;
-                            case 2: // Accesoris
-                              routeName = '/accessories'; // Rute Accesoris
-                              break;
-                            case 3: // Atomize
-                              routeName = '/atomizer'; // Rute Atomizers
-                              break;
-                            default:
-                              routeName = '/home2'; // Kembali ke halaman default
-                          }
-                          Get.toNamed(routeName); // Navigasi ke rute yang sesuai
+                          Get.toNamed('/home');
+                          // Aksi ketika tombol diklik
                         },
                         child: Text(entry.value),
                         style: ElevatedButton.styleFrom(
-                          foregroundColor: entry.key == 0 ? Colors.white : Colors.black,
-                          backgroundColor: entry.key == 0 ? Colors.orange : Colors.grey[300],
+                          foregroundColor:
+                              entry.key == 0 ? Colors.white : Colors.black,
+                          backgroundColor:
+                              entry.key == 0 ? Colors.orange : Colors.grey[300],
                         ),
                       ),
                     );
@@ -149,7 +138,6 @@ class HomeView extends StatelessWidget {
                 ),
               ),
             ),
-
 
             // Product Grid
             Expanded(
@@ -159,26 +147,18 @@ class HomeView extends StatelessWidget {
                 childAspectRatio: 0.8,
                 children: [
                   _buildProductCard(
-                    productName: 'Hotcig R234',
-                    brandName: 'VAPEBOSS',
-                    productPrice: 26.35,
-                    productImage: 'assets/images/hotcig_r234.jpg',
-                    productId: '1', // ID produk
-                    description: 'Hotcig R234 adalah mod vape yang recommended...',
-                  ),
+                      productName: 'Hotcig R234',
+                      brandName: 'VAPEBOSS',
+                      productPrice: 26.35,
+                      productImage: 'assets/images/bat1.jpg'),
                   _buildProductCard(
-                    productName: 'TRML T200',
-                    brandName: 'THERMAL X INVERSE',
-                    productPrice: 29.34,
-                    productImage: 'assets/images/trml_t200.jpg',
-                    productId: '2', // ID produk
-                    description: 'TRML T200 adalah produk...',                    
-                  ),
+                      productName: 'TRML T200',
+                      brandName: 'THERMAL X INVERSE',
+                      productPrice: 29.34,
+                      productImage: 'assets/images/bat2.jpg'),
                 ],
               ),
             ),
-
-
           ],
         ),
       ),
@@ -229,8 +209,6 @@ class HomeView extends StatelessWidget {
     required String brandName,
     required double productPrice,
     required String productImage,
-    required String productId, // Tambahkan ID produk
-    required String description, // Tambahkan deskripsi
   }) {
     return Card(
       child: Padding(
@@ -259,17 +237,7 @@ class HomeView extends StatelessWidget {
                     style: TextStyle(fontWeight: FontWeight.bold)),
                 ElevatedButton(
                   onPressed: () {
-                    // Navigasi ke DetailView dengan data produk
-                    Get.toNamed(
-                      '/detail', 
-                      arguments: {
-                        'name': productName,
-                        'type': 'Mod', // Misalnya
-                        'price': productPrice,
-                        'image': productImage,
-                        'description': description,
-                      },
-                    );
+                    Get.toNamed('/detail');
                   },
                   child: Text('+'),
                   style: ElevatedButton.styleFrom(
@@ -284,6 +252,4 @@ class HomeView extends StatelessWidget {
       ),
     );
   }
-
-
 }

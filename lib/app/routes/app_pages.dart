@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 import 'package:myapp/app/modules/home/bindings/order_binding.dart';
+import 'package:myapp/app/modules/home/views/accessories_view.dart';
+import 'package:myapp/app/modules/home/views/atomizer_view.dart';
 import 'package:myapp/app/modules/home/views/cart_view.dart';
 import 'package:myapp/app/modules/home/views/detail_view.dart';
 import 'package:myapp/app/modules/home/views/discount_view.dart';
@@ -8,9 +10,10 @@ import 'package:myapp/app/modules/home/views/done_view.dart';
 import 'package:myapp/app/modules/home/views/ecode_view.dart';
 import 'package:myapp/app/modules/home/views/editdiscount_view.dart';
 import 'package:myapp/app/modules/home/views/email_view.dart';
-import 'package:myapp/app/modules/home/views/home2_view.dart';
+
 import 'package:myapp/app/modules/home/views/home_view.dart';
 import 'package:myapp/app/modules/home/views/inputmembers_view.dart';
+import 'package:myapp/app/modules/home/views/liquid_view.dart';
 import 'package:myapp/app/modules/home/views/login_view.dart';
 import 'package:myapp/app/modules/home/views/loginas_view.dart';
 import 'package:myapp/app/modules/home/views/admin_view.dart';
@@ -161,9 +164,25 @@ class AppPages {
       binding: HomeBinding(), // You can create a separate binding for PaymentView if needed
     ),   
     GetPage(
-      name: AppRoutes.HOME2, // Define the new route for PaymentView
-      page: () => Home2View(),
+      name: AppRoutes.LIQUID, // Define the new route for PaymentView
+      page: () => LiquidView(),
       binding: HomeBinding(), // You can create a separate binding for PaymentView if needed
-    ),     
+    ),   
+    GetPage(
+      name: AppRoutes.ATOMIZER, // Define the new route for PaymentView
+      page: () => AtomizerView(),
+      binding: HomeBinding(), // You can create a separate binding for PaymentView if needed
+    ),   
+    GetPage(
+      name: AppRoutes.ACCESSORIES, // Define the new route for PaymentView
+      page: () => AccessoriesView(),
+      binding: HomeBinding(), // You can create a separate binding for PaymentView if needed
+    ),   
+
+    GetPage(
+      name: '/detail',
+      page: () => DetailView(),
+    ),
+
   ];
 }

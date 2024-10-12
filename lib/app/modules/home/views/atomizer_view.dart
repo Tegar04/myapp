@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class Home2View extends StatelessWidget {
-  const Home2View({Key? key}) : super(key: key);
+class AtomizerView extends StatelessWidget {
+  const AtomizerView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -114,7 +114,7 @@ class Home2View extends StatelessWidget {
                 scrollDirection:
                     Axis.horizontal, // Mengatur scroll secara horizontal
                 child: Row(
-                  children: ['All Vape', 'Liquid', 'Accesoris', 'Atomize']
+                  children: ['All Vape', 'Liquid', 'Accesoris', 'Atomizer']
                       .asMap()
                       .entries
                       .map((entry) {
@@ -122,7 +122,7 @@ class Home2View extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 5.0),
                       child: ElevatedButton(
                         onPressed: () {
-                          Get.toNamed('/home1');
+                          Get.toNamed('/home');
                           // Aksi ketika tombol diklik
                         },
                         child: Text(entry.value),
@@ -150,12 +150,12 @@ class Home2View extends StatelessWidget {
                       productName: 'Hotcig R234',
                       brandName: 'VAPEBOSS',
                       productPrice: 26.35,
-                      productImage: 'assets/images/liq1.jpeg'),
+                      productImage: 'assets/images/ato1.jpg'),
                   _buildProductCard(
                       productName: 'TRML T200',
                       brandName: 'THERMAL X INVERSE',
                       productPrice: 29.34,
-                      productImage: 'assets/images/liq2.jpg'),
+                      productImage: 'assets/images/ato2.jpg'),
                 ],
               ),
             ),

@@ -6,6 +6,9 @@ class DetailView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Mengambil data yang diteruskan saat navigasi
+    final Map<String, dynamic> product = Get.arguments;
+
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -31,7 +34,8 @@ class DetailView extends StatelessWidget {
                 color: Colors.black,
                 image: DecorationImage(
                   fit: BoxFit.contain,
-                  image: AssetImage('assets/hotcig_r234.png'),
+                  image: AssetImage(
+                      product['image']), // Menggunakan gambar yang diteruskan
                 ),
               ),
             ),
@@ -41,11 +45,11 @@ class DetailView extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Hotcig R234',
+                    product['name'], // Menggunakan nama produk yang diteruskan
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    'Mod',
+                    product['type'], // Menggunakan tipe produk (misal: 'Mod')
                     style: TextStyle(fontSize: 16, color: Colors.grey),
                   ),
                   Row(
@@ -60,7 +64,8 @@ class DetailView extends StatelessWidget {
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    'Hotcig R234 adalah mod vape yang recommended banget buat kamu yang nyari mod simpel, tangguh, gampang dipake, dengan performa handal dan harga terjangkau.',
+                    product[
+                        'description'], // Menggunakan deskripsi produk yang diteruskan
                     style: TextStyle(fontSize: 16),
                   ),
                   SizedBox(height: 16),
@@ -96,7 +101,7 @@ class DetailView extends StatelessWidget {
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    '\$26.35',
+                    '\$${product['price']}', // Menggunakan harga produk yang diteruskan
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 16),
