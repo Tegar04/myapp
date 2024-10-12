@@ -12,7 +12,7 @@ class OrderView extends GetView<OrderController> {
         leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
-              Get.toNamed('/welcome');
+              Get.toNamed('/home');
             }),
         title: Text('Order'),
         centerTitle: true,
