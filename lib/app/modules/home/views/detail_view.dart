@@ -75,7 +75,8 @@ class DetailView extends StatelessWidget {
                         child: Text('Black'),
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                          foregroundColor: Colors.black, backgroundColor: Colors.white,
+                          foregroundColor: Colors.black,
+                          backgroundColor: Colors.white,
                         ),
                       ),
                       SizedBox(width: 8),
@@ -83,7 +84,8 @@ class DetailView extends StatelessWidget {
                         child: Text('Silver'),
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                          foregroundColor: Colors.black, backgroundColor: Colors.white,
+                          foregroundColor: Colors.black,
+                          backgroundColor: Colors.white,
                         ),
                       ),
                     ],
@@ -102,7 +104,9 @@ class DetailView extends StatelessWidget {
                     width: double.infinity,
                     child: ElevatedButton(
                       child: Text('Buy Now'),
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.toNamed('/order');
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.black,
                         padding: EdgeInsets.symmetric(vertical: 16),
