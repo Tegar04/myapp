@@ -40,6 +40,9 @@ abstract class AppRoutes {
   static const String liquid = '/liquid'; // Rute untuk Liquid
   static const String accessories = '/accessories'; // Rute untuk Accesoris
   static const String atomizers = '/atomizers'; // Rute untuk Atomizer
+  static const GETCONNECT = '/getconnect';
+  static const ARTICLE_DETAILS = '/articlle_details';
+  static const ARTICLE_DETEAILS_WEBVIEW = '/article_details_webview';
 
   static List<GetPage> pages = [
     GetPage(name: home, page: () => HomeView()),

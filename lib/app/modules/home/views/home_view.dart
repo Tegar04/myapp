@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:myapp/app/modules/components/appbar_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -7,6 +8,10 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // Mengganti AppBar bawaan dengan CustomAppBar
+      appBar: CustomAppBar(
+        titleText: 'Home', // Menentukan teks judul AppBar
+      ),
       body: SafeArea(
         child: Column(
           children: [
@@ -62,7 +67,6 @@ class HomeView extends StatelessWidget {
             ),
 
             // Promo Banner
-            // Updated Promo Banner
             Container(
               margin: EdgeInsets.symmetric(horizontal: 16),
               height: 150, // Adjust height as needed
@@ -108,11 +112,10 @@ class HomeView extends StatelessWidget {
             ),
 
             // Category Buttons
-            // Category Buttons
             Padding(
               padding: const EdgeInsets.all(16),
               child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal, // Mengatur scroll secara horizontal
+                scrollDirection: Axis.horizontal,
                 child: Row(
                   children: ['All Vape', 'Liquid', 'Accesoris', 'Atomize']
                       .asMap()
@@ -124,24 +127,26 @@ class HomeView extends StatelessWidget {
                         onPressed: () {
                           String routeName;
                           switch (entry.key) {
-                            case 1: // Liquid
-                              routeName = '/liquid'; // Rute Liquid
+                            case 1:
+                              routeName = '/liquid';
                               break;
-                            case 2: // Accesoris
-                              routeName = '/accessories'; // Rute Accesoris
+                            case 2:
+                              routeName = '/accessories';
                               break;
-                            case 3: // Atomize
-                              routeName = '/atomizer'; // Rute Atomizers
+                            case 3:
+                              routeName = '/atomizer';
                               break;
                             default:
-                              routeName = '/home2'; // Kembali ke halaman default
+                              routeName = '/home2';
                           }
-                          Get.toNamed(routeName); // Navigasi ke rute yang sesuai
+                          Get.toNamed(routeName);
                         },
                         child: Text(entry.value),
                         style: ElevatedButton.styleFrom(
-                          foregroundColor: entry.key == 0 ? Colors.white : Colors.black,
-                          backgroundColor: entry.key == 0 ? Colors.orange : Colors.grey[300],
+                          foregroundColor:
+                              entry.key == 0 ? Colors.white : Colors.black,
+                          backgroundColor:
+                              entry.key == 0 ? Colors.orange : Colors.grey[300],
                         ),
                       ),
                     );
@@ -149,7 +154,6 @@ class HomeView extends StatelessWidget {
                 ),
               ),
             ),
-
 
             // Product Grid
             Expanded(
@@ -163,22 +167,21 @@ class HomeView extends StatelessWidget {
                     brandName: 'VAPEBOSS',
                     productPrice: 26.35,
                     productImage: 'assets/images/hotcig_r234.jpg',
-                    productId: '1', // ID produk
-                    description: 'Hotcig R234 adalah mod vape yang recommended...',
+                    productId: '1',
+                    description:
+                        'Hotcig R234 adalah mod vape yang recommended...',
                   ),
                   _buildProductCard(
                     productName: 'TRML T200',
                     brandName: 'THERMAL X INVERSE',
                     productPrice: 29.34,
                     productImage: 'assets/images/trml_t200.jpg',
-                    productId: '2', // ID produk
-                    description: 'TRML T200 adalah produk...',                    
+                    productId: '2',
+                    description: 'TRML T200 adalah produk...',
                   ),
                 ],
               ),
             ),
-
-
           ],
         ),
       ),
@@ -194,28 +197,24 @@ class HomeView extends StatelessWidget {
               icon: Icon(Icons.home, color: Colors.white),
               onPressed: () {
                 Get.toNamed('/home');
-                // Home button action
               },
             ),
             IconButton(
               icon: Icon(Icons.favorite_border, color: Colors.white),
               onPressed: () {
                 Get.toNamed('/wishlist');
-                // Wishlist button action
               },
             ),
             IconButton(
               icon: Icon(Icons.shopping_cart_outlined, color: Colors.white),
               onPressed: () {
                 Get.toNamed('/cart');
-                // Shopping button action
               },
             ),
             IconButton(
               icon: Icon(Icons.notifications_none, color: Colors.white),
               onPressed: () {
                 Get.toNamed('/notification');
-                // Notification button action
               },
             ),
           ],
@@ -229,8 +228,8 @@ class HomeView extends StatelessWidget {
     required String brandName,
     required double productPrice,
     required String productImage,
-    required String productId, // Tambahkan ID produk
-    required String description, // Tambahkan deskripsi
+    required String productId,
+    required String description,
   }) {
     return Card(
       child: Padding(
@@ -259,12 +258,11 @@ class HomeView extends StatelessWidget {
                     style: TextStyle(fontWeight: FontWeight.bold)),
                 ElevatedButton(
                   onPressed: () {
-                    // Navigasi ke DetailView dengan data produk
                     Get.toNamed(
-                      '/detail', 
+                      '/detail',
                       arguments: {
                         'name': productName,
-                        'type': 'Mod', // Misalnya
+                        'type': 'Mod',
                         'price': productPrice,
                         'image': productImage,
                         'description': description,
@@ -284,6 +282,4 @@ class HomeView extends StatelessWidget {
       ),
     );
   }
-
-
 }

@@ -12,6 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   get: ^4.6.5
+  webview_flutter: ^4.0.7
   qr_flutter: ^4.0.0
 
 dev_dependencies:
